@@ -1,30 +1,37 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
 
 const Footer = () => {
-    return (
-        <footer className="footer">
-            <p className="footer_title">Oplaize</p>
+  return (
+    <footer className="bg-dark-blue white pv4 tc">
+      <p className="mb3">
+        © {new Date().getFullYear()} Oplaize. All rights reserved.
+      </p>
+      <div className="flex justify-center gap-4">
+        <a
+          href="https://github.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="link white hover-light-blue mh3"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://linkedin.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="link white hover-light-blue mh3"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="mailto:you@example.com"
+          className="link white hover-light-blue mh3"
+        >
+          Email
+        </a>
+      </div>
+    </footer>
+  );
+};
 
-            <div className="footer_social">
-                <a href="#" className="footer_icon">
-                    <i className='bx bxl-facebook'></i>
-                </a>
-                <a href="#" className="footer_icon">
-                    <i className='bx bxl-instagram'></i>
-                </a>
-                <a href="#" className="footer_icon">
-                    <i className='bx bxl-twitter'></i>
-                </a>
-                <a href="#" className="footer_icon">
-                    <i className='bx bxl-whatsapp'></i>
-                </a>
-            </div>
-            {/* <p>&#169; 2023 copyright all right reserved</p> */}
-            <p>&copy; 2023 copyright all right reserved</p>
-        </footer>
-
-    )
-}
-
-export default Footer
+export default Footer;

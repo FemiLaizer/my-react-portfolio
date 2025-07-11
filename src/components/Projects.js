@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = ({ projects, filterCategory, projectList }) => {
   return (
-    <section className="pa4 bg-near-white">
+    <section id="projects" className="pa4 bg-near-white">
       <div className="mw8 center">
         <h2 className="f2 dark-blue tc">Projects</h2>
         <div className="work_list">

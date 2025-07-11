@@ -3,7 +3,7 @@ import profilePic from "../assets/profile.jpg"; // Replace with your own image
 
 const Hero = () => {
   return (
-    <section className="pa4 pt6-l pb5 bg-lightest-blue">
+    <section id="hero" className="pa4 pt6-l pb5 bg-lightest-blue">
       <div className="mw8 center flex flex-column flex-row-ns items-center justify-between">
         <div className="tc tl-ns w-100 w-50-ns mb4 mb0-ns">
           <h1 className="f2 f1-ns lh-title dark-blue">Hi, I'm Femi</h1>

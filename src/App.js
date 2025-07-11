@@ -2,10 +2,11 @@ import { React, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import project from "./data/projects";
 
 const allList = ["All", ...new Set(project.map((data) => data.category))];
-console.log(allList);
 
 function App() {
   const [projectList, setProjectList] = useState(allList);
@@ -13,17 +14,29 @@ function App() {
 
   const filterCategory = (e) => {
     if (e === "All") {
-      setProjects(projects);
+      setProjects(project);
       return;
     }
-    const filteredCategory = projects.filter(
+    const filteredCategory = project.filter(
       (project) => project.category === e
     );
+    console.log(e);
     setProjects(filteredCategory);
   };
 
   return (
     <div className="bg-near-white min-vh-100">
+      <main className="pt5 tc">
+        <section className="pa4">
+          <h1 className="f2 b dark-blue">Welcome to My Portfolio</h1>
+          <p className="f4 gray mt3">
+            I’m a passionate Front-End Developer based in Nigeria.
+          </p>
+          {/* <button className="mt4 pv2 ph4 br2 bg-blue white b grow pointer">
+            View My Work
+          </button> */}
+        </section>
+      </main>
       <Navbar />
       <Hero />
       <Projects
@@ -31,18 +44,8 @@ function App() {
         filterCategory={filterCategory}
         projectList={projectList}
       />
-
-      <main className="pt5 tc">
-        <section className="pa4">
-          <h1 className="f2 b dark-blue">Welcome to My Portfolio</h1>
-          <p className="f4 gray mt3">
-            I’m a passionate Front-End Developer based in Nigeria.
-          </p>
-          <button className="mt4 pv2 ph4 br2 bg-blue white b grow pointer">
-            View My Work
-          </button>
-        </section>
-      </main>
+      <Contact />
+      <Footer />
     </div>
   );
 }
