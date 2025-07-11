@@ -30,7 +30,7 @@ function App() {
         <section className="pa4">
           <h1 className="f2 b dark-blue">Welcome to My Portfolio</h1>
           <p className="f4 gray mt3">
-            I’m a passionate Front-End Developer based in Nigeria.
+            We will create amazing things together, and you will love it!.
           </p>
           {/* <button className="mt4 pv2 ph4 br2 bg-blue white b grow pointer">
             View My Work
